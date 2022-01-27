@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Github } from "styled-icons/boxicons-logos"
 
 export const Container = styled.div`
   display: flex;
@@ -7,9 +6,9 @@ export const Container = styled.div`
   justify-content: space-between;
   height: 100vh;
   color: var(--text);
-
+  
   .content {
-    max-width: 940px;
+    max-width: 768px;
     margin: auto;
     position: relative;
   }
@@ -18,14 +17,14 @@ export const Container = styled.div`
     color: var(--text);
     text-decoration: none;
 
-    &:hover {
-      color: var(--highlight);
+    &:hover * {
+      color: var(--highlight) !important;
       transition: all .7s;
     }
   }
 
   svg {
-    height: 1.8rem;
+    height: 1.5rem;
     cursor: pointer;
 
     &:hover {
@@ -34,53 +33,57 @@ export const Container = styled.div`
     }
   }
 
-  header, main, footer {
-    padding: 1rem;
-  }
-
-  header, footer {
+  > header, footer {
     background-color: var(--wrapper);
+    padding: .5rem;
+    position: sticky;
+    z-index: 1;
   }
 
-  header .content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  > header {
+    top: 0;
 
-    > a {
+    .content {
       display: flex;
       align-items: center;
+      justify-content: space-between;
 
-      .gatsby-image-wrapper {
-        height: 2.8rem;
-        width: 2.8rem;
+      > a {
+        display: flex;
+        align-items: center;
+
+        .gatsby-image-wrapper {
+          height: 2.8rem;
+          width: 2.8rem;
+          margin-right: 10px;
+        }
+
+        h1 {
+          font-size: 1rem;
+          font-weight: bold;
+          margin-bottom: 2px;
+        }
+
+        p {
+          font-size: .8rem;
+          font-weight: 300;
+        }
+      }
+
+      > div:last-of-type svg:first-child {
         margin-right: 10px;
       }
-
-      h1 {
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin-bottom: 2px;
-      }
-
-      p {
-        font-size: .8rem;
-        font-weight: 300;
-      }
-    }
-
-    > div:last-of-type svg:first-child {
-      margin-right: 10px;
     }
   }
 
-  main {
+  > main {
     background-color: var(--background);
     flex: 1;
   }
 
-  footer {
+  > footer {
     text-align: center;
+    bottom: 0;
 
     .content > svg {
        position: absolute;

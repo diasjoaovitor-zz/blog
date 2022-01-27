@@ -50,32 +50,30 @@ const GlobalStyle = createGlobalStyle`
     border-spacing: 0;
   }
 
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-
   * {
     box-sizing: border-box;
   }
   
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   body.dark {
-    --background: #161B22;
-    --wrapper: #030518;
+    --background: #0D1117;
+    --wrapper: #161B22;
     --border: #38444d;
     --highlight: #58A6FF;
-    --text: #8899a6;
-    --strong: #F0F6FC;
+    --text: #F0F6FC;
+    --sub-text: #c9d1d9;
   }
 
   body.light {
     --background: #fff;
-    --wrapper: #f0f0f3;
+    --wrapper: #e5e5e8;
     --border: #dedede;
     --highlight: #58A6FF;
     --text: #555555;
-    --strong: #111;
+    --sub-text: #111;
   }
 `
 

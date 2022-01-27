@@ -14,6 +14,18 @@ module.exports = {
         allExtensions: true, // defaults to false
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-images",
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-lazy-load`,
+        ],
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-react-helmet`,
@@ -23,6 +35,20 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `uploads`,
+        path: `${__dirname}/static/images`,
       },
     },
     `gatsby-transformer-sharp`,
