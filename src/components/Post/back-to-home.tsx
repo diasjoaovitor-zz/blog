@@ -1,10 +1,9 @@
 import * as React from "react"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import getThemeColor from "../../utils/getThemeColor"
 import * as S from './styled'
 
 const BackToHome: React.FC = () => (
-  <AniLink
+  <S.BackToHome
     to="/"
     cover
     direction="right"
@@ -12,7 +11,7 @@ const BackToHome: React.FC = () => (
     bg={getThemeColor()}
   >
     ← Voltar na listagem
-  </AniLink>
+  </S.BackToHome>
 )
 
 export default BackToHome

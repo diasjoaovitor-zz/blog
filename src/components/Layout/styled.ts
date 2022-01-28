@@ -1,12 +1,13 @@
 import styled from 'styled-components'
-
+import * as S from '../../styles/style'  
+ 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
   color: var(--text);
-  
+
   .content {
     max-width: 768px;
     margin: auto;
@@ -14,80 +15,69 @@ export const Container = styled.div`
   }
 
   a {
-    color: var(--text);
-    text-decoration: none;
-
-    &:hover * {
-      color: var(--highlight) !important;
-      transition: all .7s;
-    }
+    ${S.LinkTransition}
   }
 
   svg {
-    height: 1.5rem;
-    cursor: pointer;
-
-    &:hover {
-      fill: var(--highlight);
-      transition: all .7s;
-    }
+    ${S.SvgLinkTransition}
   }
 
   > header, footer {
     background-color: var(--wrapper);
-    padding: .5rem;
     position: sticky;
     z-index: 1;
+    padding: .5rem;
   }
+`
 
-  > header {
-    top: 0;
+export const Header = styled.header`
+  top: 0;
 
-    .content {
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    > a {
       display: flex;
       align-items: center;
-      justify-content: space-between;
 
-      > a {
-        display: flex;
-        align-items: center;
-
-        .gatsby-image-wrapper {
-          height: 2.8rem;
-          width: 2.8rem;
-          margin-right: 10px;
-        }
-
-        h1 {
-          font-size: 1rem;
-          font-weight: bold;
-          margin-bottom: 2px;
-        }
-
-        p {
-          font-size: .8rem;
-          font-weight: 300;
-        }
-      }
-
-      > div:last-of-type svg:first-child {
+      .gatsby-image-wrapper {
+        height: 2.8rem;
+        width: 2.8rem;
         margin-right: 10px;
       }
+
+      h1 {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 2px;
+      }
+
+      h2 {
+        font-size: .8rem;
+        font-weight: 300;
+      }
+    }
+
+    > div:last-of-type svg:first-child {
+      margin-right: 10px;
     }
   }
+`
 
-  > main {
-    background-color: var(--background);
-    flex: 1;
-  }
+export const Main = styled.main`
+  background-color: var(--background);
+  flex: 1;
+  padding: 0 .8rem;
+`
 
-  > footer {
-    text-align: center;
-    bottom: 0;
+export const Footer = styled.footer`
+  text-align: center;
+  bottom: 0;
 
-    .content > svg {
-       position: absolute;
-       right: 0;
-    }
+  .content > svg {
+    position: absolute;
+    right: 0;
   }
 `

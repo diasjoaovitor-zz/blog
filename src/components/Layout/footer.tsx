@@ -1,9 +1,11 @@
 import * as React from "react"
 import { ArrowUpward } from "styled-icons/material-outlined"
 import { Github } from "styled-icons/boxicons-logos"
+import * as S from './styled'
+
 
 const Footer: React.FC = () => (
-  <footer>
+  <S.Footer>
     <div className="content">
       <a href="https://github.com/diasjoaovitor" target="_blank">
         <Github />
@@ -13,7 +15,7 @@ const Footer: React.FC = () => (
         onClick={() => document.querySelector('.tl-edges').scrollTop = 0} 
       />
     </div>
-  </footer>
+  </S.Footer>
 )
 
 export default Footer

@@ -4,6 +4,7 @@ import AnyLink from 'gatsby-plugin-transition-link/AniLink'
 import { StaticImage }  from 'gatsby-plugin-image'
 import { Search, Lightbulb } from "styled-icons/material-outlined"
 import getThemeColor from '../../utils/getThemeColor'
+import * as S from './styled'
 
 type DataProps = {
   site: {
@@ -41,7 +42,7 @@ const Header: React.FC = () => {
   }, [])
 
   return (
-    <header>
+    <S.Header>
       <div className="content">
         <AnyLink 
           to="/"
@@ -56,7 +57,7 @@ const Header: React.FC = () => {
           />
           <div>
             <h1>{title}</h1>
-            <p>{description}</p>
+            <h2>{description}</h2>
           </div>
         </AnyLink>
         <div>
@@ -67,7 +68,7 @@ const Header: React.FC = () => {
           />
         </div>
       </div>
-    </header>
+    </S.Header>
   )
 }
 

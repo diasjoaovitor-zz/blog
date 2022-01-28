@@ -64,7 +64,7 @@ const GlobalStyle = createGlobalStyle`
     --border: #38444d;
     --highlight: #58A6FF;
     --text: #F0F6FC;
-    --sub-text: #c9d1d9;
+    --subtext: #c9d1d9;
   }
 
   body.light {
@@ -73,7 +73,7 @@ const GlobalStyle = createGlobalStyle`
     --border: #dedede;
     --highlight: #58A6FF;
     --text: #555555;
-    --sub-text: #111;
+    --subtext: #111;
   }
 `
 

@@ -13,18 +13,18 @@ type Props = {
 }
 
 const Post: React.FC<Props> = ({ date, timeToRead, title, description, tags, html }) => (
-  <S.Div>
-    <header>
+  <>
+    <S.Header>
       <BackToHome />
       <time>{date} • {timeToRead} min de leitura </time>
       <h1>{title}</h1>
       <h2>{description}</h2>
       <Tags tags={tags} />
-    </header>
-    <main>
+    </S.Header>
+    <S.Main>
       <div dangerouslySetInnerHTML={{ __html: html }}></div>
-    </main>
-  </S.Div>
+    </S.Main>
+  </>
 )
 
 export default Post

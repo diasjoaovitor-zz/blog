@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import * as S from '../../styles/style'
 
 export const Section = styled.section`
   border-top: 1px solid var(--border);
@@ -9,10 +10,6 @@ export const Section = styled.section`
   .content {
     display: flex;
     justify-content: space-between;
-
-    a:hover {
-      color: var(--highlight);
-      transition: .7s;
-    }
+    ${S.LinkTransition}
   }
 `

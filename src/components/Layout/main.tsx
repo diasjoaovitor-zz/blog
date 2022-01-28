@@ -1,11 +1,12 @@
 import * as React from "react"
+import * as S from './styled'
 
 const Main: React.FC = ({ children }) => (
-  <main>
+  <S.Main>
     <div className="content">
       {children}
     </div>
-  </main>
+  </S.Main>
 )
 
 export default Main
