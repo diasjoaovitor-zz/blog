@@ -5,7 +5,6 @@ module.exports = {
     author: `@diasjoaovitor`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
-  pathPrefix: "/blog",
   plugins: [
     {
       resolve: `gatsby-plugin-typescript`,
