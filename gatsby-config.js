@@ -5,6 +5,7 @@ module.exports = {
     author: `@diasjoaovitor`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
+  pathPrefix: "/blog",
   plugins: [
     {
       resolve: `gatsby-plugin-typescript`,
@@ -30,7 +31,6 @@ module.exports = {
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
-    pathPrefix: "/blog",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
