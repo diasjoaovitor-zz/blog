@@ -4,8 +4,14 @@ import * as S from '../../styles/style'
 
 export const BackToHome = styled(AniLink)`
   ${S.LinkTransition}
-  margin-bottom: 1.4rem;
-  display: block;
+  color: var(--highlight) !important;
+  border-bottom: 1px solid #0000;
+  padding-bottom: .2rem;
+  transition: all .7s;
+
+  &:hover {
+    border-color: var(--highlight);
+  }
 `
 
 export const Header = styled.header`
@@ -24,6 +30,11 @@ export const Header = styled.header`
     font-size: 1.6rem;
     line-height: 2rem;
     margin-bottom: 1.6rem;
+  }
+
+  time {
+    margin-top: 1.4rem;
+
   }
 
   time, div {
